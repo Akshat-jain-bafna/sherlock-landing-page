@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Embedded style sheet -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --backgroundlightprimary: rgba(255, 255, 255, 1);
+            --backgroundlightsecondary: rgba(242, 242, 247, 1);
+            --backgroundlighttertiary: rgba(255, 255, 255, 1);
+            --backgrounddarkprimary: rgba(0, 0, 0, 1);
+            --backgrounddarksecondary: rgba(28, 28, 30, 1);
+            --backgrounddarktertiary: rgba(44, 44, 46, 1);
+            --backgrounddarkquarternary: rgba(58, 58, 60, 1);
+            --materialsglass-2: rgba(28, 28, 30, 0.64);
+            --materialsglass-3: rgba(0, 0, 0, 0.84);
+            --textlightprimary: rgba(0, 0, 0, 1);
+            --textlightsecondary: rgba(60, 60, 67, 0.6);
+            --textlighttertiary: rgba(60, 60, 67, 0.3);
+            --textlightquarternary: rgba(60, 60, 67, 0.18);
+            --textdarkprimary: rgba(255, 255, 255, 1);
+            --textdarksecondary: rgba(235, 235, 245, 0.6);
+            --textdarktertiary: rgba(235, 235, 245, 0.3);
+            --textdarkquarternary: rgba(235, 235, 245, 0.18);
+            --platform-accentsinfinity-ceruleanbase: rgba(6, 169, 239, 1);
+            --platform-accentsinfinity-ceruleantint: rgba(81, 195, 244, 1);
+            --platform-accentsinfinity-ceruleanshade: rgba(5, 152, 215, 1);
+            --platform-accentsroyal-magentabase: rgba(110, 12, 223, 1);
+            --platform-accentsroyal-magentatint: rgba(154, 85, 233, 1);
+            --platform-accentsroyal-magentashade: rgba(99, 11, 201, 1);
+            --platform-accentsvibrant-scarletbase: rgba(229, 6, 87, 1);
+            --platform-accentsvibrant-scarlettint: rgba(237, 81, 137, 1);
+            --platform-accentsvibrant-scarletshade: rgba(206, 5, 78, 1);
+            --platform-accentsrich-goldenrodbase: rgba(250, 157, 76, 1);
+            --platform-accentsrich-goldenrodtint: rgba(252, 186, 130, 1);
+            --platform-accentsrich-goldenrodshade: rgba(225, 141, 68, 1);
+            --indicatorspositive: rgba(18, 198, 20, 1);
+            --indicatorsneutral: rgba(251, 176, 59, 1);
+            --indicatorsnegative: rgba(244, 0, 9, 1);
+            --indicatorsnegative-hover: rgba(255, 41, 49, 1);
+            --indicatorsnegative-onclick: rgba(194, 0, 7, 1);
+            --inter-bold-heading-1-font-family: "Inter-Bold", Helvetica;
+            --inter-bold-heading-1-font-weight: 700;
+            --inter-bold-heading-1-font-size: 22px;
+            --inter-bold-heading-1-letter-spacing: 0px;
+            --inter-bold-heading-1-line-height: 28px;
+            --inter-bold-heading-1-font-style: normal;
+            --inter-bold-heading-2-font-family: "Inter-Bold", Helvetica;
+            --inter-bold-heading-2-font-weight: 700;
+            --inter-bold-heading-2-font-size: 1.2em;
+            --inter-bold-heading-2-letter-spacing: 0px;
+            --inter-bold-heading-2-line-height: 24px;
+            --inter-bold-heading-2-font-style: normal;
+            --inter-bold-body-1-font-family: "Inter-Bold", Helvetica;
+            --inter-bold-body-1-font-weight: 700;
+            --inter-bold-body-1-font-size: 16px;
+            --inter-bold-body-1-letter-spacing: 0px;
+            --inter-bold-body-1-line-height: 20px;
+            --inter-bold-body-1-font-style: normal;
+            --inter-bold-body-2-font-family: "Inter-Bold", Helvetica;
+            --inter-bold-body-2-font-weight: 700;
+            --inter-bold-body-2-font-size: 14px;
+            --inter-bold-body-2-letter-spacing: 0px;
+            --inter-bold-body-2-line-height: 20px;
+            --inter-bold-body-2-font-style: normal;
+            --inter-bold-caption-1-font-family: "Inter-Bold", Helvetica;
+            --inter-bold-caption-1-font-weight: 700;
+            --inter-bold-caption-1-font-size: 12px;
+            --inter-bold-caption-1-letter-spacing: 0px;
+            --inter-bold-caption-1-line-height: 16px;
+            --inter-bold-caption-1-font-style: normal;
+            --inter-bold-caption-2-font-family: "Inter-Bold", Helvetica;
+            --inter-bold-caption-2-font-weight: 700;
+            --inter-bold-caption-2-font-size: 10px;
+            --inter-bold-caption-2-letter-spacing: 0px;
+            --inter-bold-caption-2-line-height: 16px;
+            --inter-bold-caption-2-font-style: normal;
+            --inter-semibold-heading-1-font-family: "Inter-SemiBold", Helvetica;
+            --inter-semibold-heading-1-font-weight: 600;
+            --inter-semibold-heading-1-font-size: 22px;
+            --inter-semibold-heading-1-letter-spacing: 0px;
+            --inter-semibold-heading-1-line-height: 28px;
+            --inter-semibold-heading-1-font-style: normal;
+            --inter-semibold-heading-2-font-family: "Inter-SemiBold", Helvetica;
+            --inter-semibold-heading-2-font-weight: 600;
+            --inter-semibold-heading-2-font-size: 18px;
+            --inter-semibold-heading-2-letter-spacing: 0px;
+            --inter-semibold-heading-2-line-height: 24px;
+            --inter-semibold-heading-2-font-style: normal;
+            --inter-semibold-body-1-font-family: "Inter-SemiBold", Helvetica;
+            --inter-semibold-body-1-font-weight: 600;
+            --inter-semibold-body-1-font-size: 16px;
+            --inter-semibold-body-1-letter-spacing: 0px;
+            --inter-semibold-body-1-line-height: 20px;
+            --inter-semibold-body-1-font-style: normal;
+            --inter-semibold-body-2-font-family: "Inter-SemiBold", Helvetica;
+            --inter-semibold-body-2-font-weight: 600;
+            --inter-semibold-body-2-font-size: 14px;
+            --inter-semibold-body-2-letter-spacing: 0px;
+            --inter-semibold-body-2-line-height: 20px;
+            --inter-semibold-body-2-font-style: normal;
+            --inter-semibold-caption-1-font-family: "Inter-SemiBold", Helvetica;
+            --inter-semibold-caption-1-font-weight: 600;
+            --inter-semibold-caption-1-font-size: 0.75em;
+            --inter-semibold-caption-1-letter-spacing: 0px;
+            --inter-semibold-caption-1-line-height: 16px;
+            --inter-semibold-caption-1-font-style: normal;
+            --inter-semibold-caption-2-font-family: "Inter-SemiBold", Helvetica;
+            --inter-semibold-caption-2-font-weight: 600;
+            --inter-semibold-caption-2-font-size: 10px;
+            --inter-semibold-caption-2-letter-spacing: 0px;
+            --inter-semibold-caption-2-line-height: 16px;
+            --inter-semibold-caption-2-font-style: normal;
+            --inter-medium-heading-1-font-family: "Inter-Medium", Helvetica;
+            --inter-medium-heading-1-font-weight: 500;
+            --inter-medium-heading-1-font-size: 1.25em;
+            --inter-medium-heading-1-letter-spacing: 0px;
+            --inter-medium-heading-1-line-height: 28px;
+            --inter-medium-heading-1-font-style: normal;
+            --inter-medium-heading-2-font-family: "Inter-Medium", Helvetica;
+            --inter-medium-heading-2-font-weight: 500;
+            --inter-medium-heading-2-font-size: 1.2em;
+            --inter-medium-heading-2-letter-spacing: 0px;
+            --inter-medium-heading-2-line-height: 24px;
+            --inter-medium-heading-2-font-style: normal;
+            --inter-medium-body-1-font-family: "Inter-Medium", Helvetica;
+            --inter-medium-body-1-font-weight: 500;
+            --inter-medium-body-1-font-size: 16px;
+            --inter-medium-body-1-letter-spacing: 0px;
+            --inter-medium-body-1-line-height: 20px;
+            --inter-medium-body-1-font-style: normal;
+            --inter-medium-body-2-font-family: "Inter-Medium", Helvetica;
+            --inter-medium-body-2-font-weight: 500;
+            --inter-medium-body-2-font-size: 14px;
+            --inter-medium-body-2-letter-spacing: 0px;
+            --inter-medium-body-2-line-height: 20px;
+            --inter-medium-body-2-font-style: normal;
+            --inter-medium-caption-1-font-family: "Inter-Medium", Helvetica;
+            --inter-medium-caption-1-font-weight: 500;
+            --inter-medium-caption-1-font-size: 12px;
+            --inter-medium-caption-1-letter-spacing: 0px;
+            --inter-medium-caption-1-line-height: 16px;
+            --inter-medium-caption-1-font-style: normal;
+            --inter-medium-caption-2-font-family: "Inter-Medium", Helvetica;
+            --inter-medium-caption-2-font-weight: 500;
+            --inter-medium-caption-2-font-size: 10px;
+            --inter-medium-caption-2-letter-spacing: 0px;
+            --inter-medium-caption-2-line-height: 16px;
+            --inter-medium-caption-2-font-style: normal;
+            --inter-presentation-title-font-family: "Inter-Bold", Helvetica;
+            --inter-presentation-title-font-weight: 700;
+            --inter-presentation-title-font-size: 80px;
+            --inter-presentation-title-letter-spacing: 0px;
+            --inter-presentation-title-line-height: 100px;
+            --inter-presentation-title-font-style: normal;
+            --inter-presentation-subtitle-font-family: "Inter-Bold", Helvetica;
+            --inter-presentation-subtitle-font-weight: 700;
+            --inter-presentation-subtitle-font-size: 20px;
+            --inter-presentation-subtitle-letter-spacing: 1px;
+            --inter-presentation-subtitle-line-height: 28px;
+            --inter-presentation-subtitle-font-style: normal;
+            --inter-presentation-emphasized-figure-font-family: "Inter-SemiBold", Helvetica;
+            --inter-presentation-emphasized-figure-font-weight: 600;
+            --inter-presentation-emphasized-figure-font-size: 62px;
+            --inter-presentation-emphasized-figure-letter-spacing: 1px;
+            --inter-presentation-emphasized-figure-line-height: 76px;
+            --inter-presentation-emphasized-figure-font-style: normal;
+            --inter-presentation-emphasized-body-font-family: "Inter-SemiBold", Helvetica;
+            --inter-presentation-emphasized-body-font-weight: 600;
+            --inter-presentation-emphasized-body-font-size: 34px;
+            --inter-presentation-emphasized-body-letter-spacing: 0px;
+            --inter-presentation-emphasized-body-line-height: 44px;
+            --inter-presentation-emphasized-body-font-style: normal;
+            --inter-presentation-content-heading-font-family: "Inter-Bold", Helvetica;
+            --inter-presentation-content-heading-font-weight: 700;
+            --inter-presentation-content-heading-font-size: 38px;
+            --inter-presentation-content-heading-letter-spacing: 0px;
+            --inter-presentation-content-heading-line-height: 48px;
+            --inter-presentation-content-heading-font-style: normal;
+            --inter-presentation-body-font-family: "Inter-SemiBold", Helvetica;
+            --inter-presentation-body-font-weight: 600;
+            --inter-presentation-body-font-size: 25px;
+            --inter-presentation-body-letter-spacing: 0px;
+            --inter-presentation-body-line-height: 32px;
+            --inter-presentation-body-font-style: normal;
+            --elevation-shadow: 0px 4px 40px 0px rgba(238, 238, 238, 1), 0px 4px 8px 0px rgba(66, 71, 76, 0.05),
+                0px 0px 0.5px 0px rgba(66, 71, 76, 0.32);
+            --standard-shadow: 4px 8px 8px 0px rgba(0, 0, 0, 0.24);
+            --glass-1: 0px 4px 8px 0px rgba(0, 0, 0, 0.12);
+            --glass-2: 0px 4px 8px 0px rgba(0, 0, 0, 0.12);
+            --glass-3: 0px 4px 8px 0px rgba(0, 0, 0, 0.12);
+            --glow-lv-1: ;
+            --glow-lv-2: ;
+            --neumorphic-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.16), -4px -8px 12px 0px rgba(0, 0, 0, 0.16);
+            --function-shadow: -4px 0px 8px 0px rgba(0, 0, 0, 0.24);
+            --right-click-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.16), -4px -8px 12px 0px rgba(0, 0, 0, 0.16);
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--backgrounddarkprimary);
+            box-sizing: border-box;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .header {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .header .platform-logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .logo-container {
+            position: relative;
+            width: 32px;
+            height: 32px;
+        }
+
+        .header .middle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            top: 12px;
+            left: 6px;
+            border-radius: 2px;
+            transform: rotate(45deg);
+            background: linear-gradient(180deg, rgb(110, 12, 223) 0%, rgb(229, 6, 87) 100%);
+        }
+
+        .header .bottom {
+            position: absolute;
+            width: 8px;
+            height: 17px;
+            top: 15px;
+            left: 7px;
+            border-radius: 0px 40px 8px 40px;
+            transform: rotate(45deg);
+            box-shadow: 0px -4px 8px #00000040;
+            background: linear-gradient(180deg, rgb(229, 6, 87) 0%, rgb(250, 157, 76) 100%);
+        }
+
+        .header .top {
+            position: absolute;
+            width: 8px;
+            height: 17px;
+            top: 1px;
+            left: 5px;
+            border-radius: 8px 40px 0px 40px;
+            transform: rotate(45deg);
+            box-shadow: 0px 4px 8px #0000003d;
+            background: linear-gradient(180deg, rgb(6, 169, 239) 0%, rgb(110, 12, 223) 100%);
+        }
+
+        .header .sherlock-AI {
+            font-family: "Inter-Medium", Helvetica;
+            font-weight: 400;
+            color: var(--textdarkprimary);
+            font-size: 1em;
+            letter-spacing: 0;
+            line-height: 24px;
+            white-space: nowrap;
+        }
+
+        .header .text-wrapper {
+            font-weight: var(--inter-medium-heading-2-font-weight);
+            font-family: var(--inter-medium-heading-2-font-family);
+            font-style: var(--inter-medium-heading-2-font-style);
+            letter-spacing: var(--inter-medium-heading-2-letter-spacing);
+            line-height: var(--inter-medium-heading-2-line-height);
+            font-size: var(--inter-medium-heading-2-font-size);
+        }
+
+        .header .span {
+            font-family: var(--inter-bold-heading-2-font-family);
+            font-weight: var(--inter-bold-heading-2-font-weight);
+            font-style: var(--inter-bold-heading-2-font-style);
+            letter-spacing: var(--inter-bold-heading-2-letter-spacing);
+            line-height: var(--inter-bold-heading-2-line-height);
+            font-size: var(--inter-bold-heading-2-font-size);
+        }
+
+        .header .CTA-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 8px 16px;
+            background-color: var(--platform-accentsinfinity-ceruleanbase);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .header .CTA-buttoon-text {
+            font-family: var(--inter-semibold-caption-1-font-family);
+            font-weight: var(--inter-semibold-caption-1-font-weight);
+            color: var(--textdarkprimary);
+            font-size: var(--inter-semibold-caption-1-font-size);
+            letter-spacing: var(--inter-semibold-caption-1-letter-spacing);
+            line-height: var(--inter-semibold-caption-1-line-height);
+            white-space: nowrap;
+            font-style: var(--inter-semibold-caption-1-font-style);
+        }
+
+
+        .hero {
+            background-color: var(--backgrounddarkprimary);
+            margin: auto;
+            margin-bottom: 0 !important;
+            overflow: hidden;
+
+        }
+
+        .hero .overlap {}
+
+        .hero .group {
+            height: 225px;
+            width: 80%;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero .overlap-group {
+            position: relative;
+            width: 640px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero .japan-map {
+            transform: rotate(-32deg) skew(20deg);
+            width: inherit;
+            height: 350px;
+            top: 50px;
+            left: 49px;
+            overflow: hidden;
+        }
+
+
+        .hero .fukuoka {
+            position: absolute;
+            width: inherit;
+            object-fit: cover;
+        }
+
+        .hero .ellipse {
+            position: absolute;
+            width: 800px;
+            height: 500px;
+            top: -150px;
+            left: -50px;
+            border-radius: 385px/224.5px;
+            transform: rotate(32deg);
+            background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.64) 100%);
+        }
+
+        .hero .pointmap {
+            position: absolute;
+            width: 329px;
+            height: 190px;
+            top: -75px;
+            left: 147px;
+        }
+
+        .hero .img {
+            position: absolute;
+            width: 369px;
+            height: 213px;
+            top: -25px;
+            left: 177px;
+        }
+
+        .hero .filter {
+            position: absolute;
+            height: 772px;
+            top: 64px;
+            left: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.64) 100%);
+        }
+
+        .hero .header {
+            height: 76px;
+            background-color: var(--materialsglass-3);
+            backdrop-filter: blur(64px) brightness(100%);
+            -webkit-backdrop-filter: blur(64px) brightness(100%);
+            background-blend-mode: luminosity;
+            box-shadow: var(--glass-3);
+        }
+
+        .hero .platform-logo {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            top: 24px;
+            left: 120px;
+        }
+
+        .hero .logo {
+            position: relative;
+            width: 20px;
+            height: 32px;
+            left: 5px;
+        }
+
+        .hero .logo-container {
+            position: relative;
+            height: 32px;
+        }
+
+        .hero .middle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            top: 12px;
+            left: 6px;
+            border-radius: 2px;
+            transform: rotate(45deg);
+            background: linear-gradient(180deg, rgb(110, 12, 223) 0%, rgb(229, 6, 87) 100%);
+        }
+
+        .hero .bottom {
+            position: absolute;
+            width: 8px;
+            height: 17px;
+            top: 15px;
+            left: 7px;
+            border-radius: 0px 40px 8px 40px;
+            transform: rotate(45deg);
+            box-shadow: 0px -4px 8px #00000040;
+            background: linear-gradient(180deg, rgb(229, 6, 87) 0%, rgb(250, 157, 76) 100%);
+        }
+
+        .hero .top {
+            position: absolute;
+            width: 8px;
+            height: 17px;
+            top: 1px;
+            left: 5px;
+            border-radius: 8px 40px 0px 40px;
+            transform: rotate(45deg);
+            box-shadow: 0px 4px 8px #0000003d;
+            background: linear-gradient(180deg, rgb(6, 169, 239) 0%, rgb(110, 12, 223) 100%);
+        }
+
+
+        .hero .text-wrapper {
+            font-weight: var(--inter-medium-heading-2-font-weight);
+            font-family: var(--inter-medium-heading-2-font-family);
+            font-style: var(--inter-medium-heading-2-font-style);
+            letter-spacing: var(--inter-medium-heading-2-letter-spacing);
+            line-height: var(--inter-medium-heading-2-line-height);
+            font-size: var(--inter-medium-heading-2-font-size);
+        }
+
+
+        .hero .CTA-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px 40px;
+            background-color: var(--platform-accentsinfinity-ceruleanbase);
+            border-radius: 48px;
+            overflow: hidden;
+            box-shadow: 0px 4px 8px #06a9ef7a;
+        }
+
+        .hero .CTA-buttoon-text {
+            text-shadow: 4px 8px 8px #0000003d;
+            font-family: var(--inter-medium-heading-1-font-family);
+            font-weight: var(--inter-medium-heading-1-font-weight);
+            color: var(--textdarkprimary);
+            font-size: var(--inter-medium-heading-1-font-size);
+            text-align: center;
+            letter-spacing: var(--inter-medium-heading-1-letter-spacing);
+            line-height: var(--inter-medium-heading-1-line-height);
+            white-space: nowrap;
+            font-style: var(--inter-medium-heading-1-font-style);
+        }
+
+        .hero .frame {
+            gap: 64px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+
+        .hero .frame-2 {
+            align-items: flex-start;
+            gap: 32px;
+            position: relative;
+            flex: 0 0 auto;
+            display: inline-flex;
+            flex-direction: column;
+        }
+
+        .hero .tagline {
+            background: linear-gradient(180deg, rgb(81, 195, 244) 0%, rgb(6, 169, 239) 50%, rgb(5, 152, 215) 100%);
+            -webkit-background-clip: text !important;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+            font-family: "Inter-SemiBold", Helvetica;
+            font-weight: 600;
+            color: transparent;
+            font-size: 70px;
+            margin: 0;
+            text-align: center;
+            letter-spacing: 0;
+        }
+
+        .hero .text-wrapper-3 {
+            position: relative;
+            font-family: "Inter-Medium", Helvetica;
+            font-weight: 500;
+            color: var(--textdarkprimary);
+            font-size: 1.5em;
+            text-align: center;
+            letter-spacing: 0;
+            line-height: 36px;
+        }
+
+        .hero .div-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px 40px;
+            position: relative;
+            flex: 0 0 auto;
+            background-color: var(--platform-accentsinfinity-ceruleanbase);
+            border-radius: 48px;
+            overflow: hidden;
+            box-shadow: 0px 4px 8px #06a9ef7a;
+        }
+
+        .hero .text-wrapper-4 {
+            position: relative;
+            width: fit-content;
+            margin-top: -1px;
+            text-shadow: 4px 8px 8px #0000003d;
+            font-family: var(--inter-medium-heading-1-font-family);
+            font-weight: var(--inter-medium-heading-1-font-weight);
+            color: var(--textdarkprimary);
+            font-size: var(--inter-medium-heading-1-font-size);
+            text-align: center;
+            letter-spacing: var(--inter-medium-heading-1-letter-spacing);
+            line-height: var(--inter-medium-heading-1-line-height);
+            white-space: nowrap;
+            font-style: var(--inter-medium-heading-1-font-style);
+        }
+
+        .hero .text-wrapper-5 {
+            position: absolute;
+            top: 150px;
+            left: 0px;
+            width: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 4px 8px 8px #0000003d;
+            font-family: var(--inter-medium-heading-1-font-family);
+            font-weight: var(--inter-medium-heading-1-font-weight);
+            color: var(--textdarkprimary);
+            font-size: var(--inter-medium-heading-1-font-size);
+            text-align: center;
+            letter-spacing: var(--inter-medium-heading-1-letter-spacing);
+            line-height: var(--inter-medium-heading-1-line-height);
+            white-space: nowrap;
+            font-style: var(--inter-medium-heading-1-font-style);
+        }
+
+        .hero .ic-round-keyboard {
+            width: 30px;
+            height: 32px;
+        }
+
+        .feature-set {
+            background-color: var(--backgrounddarkprimary);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .feature-set .text-wrapper {
+            font-family: "Inter-SemiBold", Helvetica;
+            font-weight: 600;
+            color: #ffffff;
+            font-size: 2em;
+            text-align: center;
+            letter-spacing: 0;
+        }
+
+        .feature-set .frame {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .feature-set .feature-box {
+            width: 375px;
+            height: 475px;
+            background-color: var(--materialsglass-2);
+            border-radius: 8px;
+            overflow: hidden;
+            backdrop-filter: blur(64px) brightness(100%);
+            -webkit-backdrop-filter: blur(64px) brightness(100%);
+            background-blend-mode: luminosity;
+            box-shadow: var(--glass-2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1em;
+        }
+
+        .feature-set .feature-img {
+            margin: 1rem auto;
+        }
+
+        .feature-img img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .feature-set .feature-info {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .feature-set .title {
+            margin-top: 0.5em;
+            margin-bottom: 0;
+            font-family: "Inter-Bold", Helvetica;
+            font-weight: 700;
+            color: var(--textdarkprimary);
+            font-size: 1.4em;
+            letter-spacing: 0;
+            line-height: 28px;
+        }
+
+        .feature-set .description {
+            margin: auto;
+            font-family: var(--inter-medium-heading-2-font-family);
+            font-weight: var(--inter-medium-heading-2-font-weight);
+            color: var(--textdarksecondary);
+            font-size: var(--inter-medium-heading-2-font-size);
+            letter-spacing: var(--inter-medium-heading-2-letter-spacing);
+            line-height: var(--inter-medium-heading-2-line-height);
+            font-style: var(--inter-medium-heading-2-font-style);
+        }
+
+        .outcome-set {
+            background-color: var(--backgrounddarkprimary);
+        }
+
+        .outcome-set .text-wrapper {
+            font-family: "Inter-SemiBold", Helvetica;
+            font-weight: 600;
+            color: #ffffff;
+            font-size: 2em;
+            text-align: center;
+            letter-spacing: 0;
+            line-height: 48px;
+            padding-top: 32px;
+        }
+
+        .outcome-set .frame {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .outcome-set .outcome-box {
+            height: 240px;
+            width: 375px;
+            background-color: var(--materialsglass-2);
+            border-radius: 8px;
+            overflow: hidden;
+            backdrop-filter: blur(64px) brightness(100%);
+            -webkit-backdrop-filter: blur(64px) brightness(100%);
+            background-blend-mode: luminosity;
+            box-shadow: var(--glass-2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1em;
+
+        }
+
+        .outcome-set .outcome-img {
+            margin-bottom: 1em;
+        }
+
+        .outcome-img img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .outcome-set .title-2 {
+            font-family: "Inter-Bold", Helvetica;
+            font-weight: 700;
+            color: var(--textdarksecondary);
+            font-size: 1.1em;
+            letter-spacing: 0;
+            line-height: 28px;
+        }
+
+        .privacy {
+            background-image: url('img/ic_round-lock.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: auto;
+            padding: 5rem;
+        }
+
+        .privacy .text-wrapper {
+            font-family: "Inter-SemiBold", Helvetica;
+            font-weight: 600;
+            color: #ffffff;
+            font-size: 2em;
+            text-align: center;
+            letter-spacing: 0;
+            line-height: 48px;
+        }
+
+        .privacy .title {
+            font-family: "Inter-Medium", Helvetica;
+            font-weight: 500;
+            color: var(--textdarkprimary);
+            font-size: 1.1em;
+            letter-spacing: 0;
+            line-height: 28px;
+        }
+
+        .call-to-action {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--backgrounddarkprimary);
+        }
+
+        .call-to-action .text-wrapper {
+            font-family: "Inter-SemiBold", Helvetica;
+            font-weight: 600;
+            color: #ffffff;
+            font-size: 2em;
+            text-align: center;
+            letter-spacing: 0;
+            line-height: 48px;
+        }
+
+        .call-to-action .CTA-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px 40px;
+            background-color: var(--platform-accentsinfinity-ceruleanbase);
+            border-radius: 48px;
+            overflow: hidden;
+            box-shadow: 0px 4px 8px #06a9ef7a;
+        }
+
+        .call-to-action .CTA-buttoon-text {
+            text-shadow: 4px 8px 8px #0000003d;
+            font-family: var(--inter-medium-heading-1-font-family);
+            font-weight: var(--inter-medium-heading-1-font-weight);
+            color: var(--textdarkprimary);
+            font-size: var(--inter-medium-heading-1-font-size);
+            text-align: center;
+            letter-spacing: var(--inter-medium-heading-1-letter-spacing);
+            line-height: var(--inter-medium-heading-1-line-height);
+            white-space: nowrap;
+            font-style: var(--inter-medium-heading-1-font-style);
+        }
+
+        .footer {
+            height: 156px;
+            margin: auto;
+            background-color: var(--backgrounddarkprimary);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer .text-wrapper {
+            font-family: var(--inter-medium-heading-1-font-family);
+            font-weight: var(--inter-medium-heading-1-font-weight);
+            color: var(--textdarksecondary);
+            font-size: var(--inter-medium-heading-1-font-size);
+            letter-spacing: var(--inter-medium-heading-1-letter-spacing);
+            line-height: var(--inter-medium-heading-1-line-height);
+            white-space: nowrap;
+            font-style: var(--inter-medium-heading-1-font-style);
+        }
+
+        .footer .social-links-container {
+            font-family: var(--inter-medium-heading-1-font-family);
+            font-weight: var(--inter-medium-heading-1-font-weight);
+            color: var(--textdarksecondary);
+            font-size: var(--inter-medium-heading-1-font-size);
+            letter-spacing: var(--inter-medium-heading-1-letter-spacing);
+            line-height: var(--inter-medium-heading-1-line-height);
+            white-space: nowrap;
+            font-style: var(--inter-medium-heading-1-font-style);
+            display: flex;
+        }
+
+        .footer .social-icons {
+            margin-left: 20px;
+            gap: 12px;
+            display: flex;
+        }
+
+        .footer img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .window {
+            width: 80%;
+            margin: 5rem auto;
+        }
+
+        @media screen and (max-width: 600px) {
+            .window:first-of-type {
+                margin: 2rem auto;
+            }
+
+            .hero {
+                width: 100%;
+            }
+
+            .hero .frame {
+                width: 90%;
+                gap: 0
+            }
+
+            .feature-set .feature-box,
+            .outcome-set .outcome-box {
+                width: 85vw;
+                height: fit-content;
+                margin: auto;
+                align-items: flex-start;
+            }
+
+            .privacy {
+                padding: 5rem 0;
+            }
+
+            .footer {
+                justify-content: center;
+            }
+
+            .hero .tagline {
+                font-size: 2.2em;
+            }
+
+            .hero .text-wrapper-3 {
+                font-size: 1.1em;
+            }
+
+            .hero .frame-2 {
+                gap: 0px
+            }
+
+            .outcome-set .outcome-img {
+                margin-bottom: 0
+            }
+
+            .privacy .title {
+                text-align: center;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="platform-logo">
+            <div class="logo-container">
+                <div class="middle"></div>
+                <div class="bottom"></div>
+                <div class="top"></div>
+            </div>
+            <div class="sherlock-AI">
+                <span class="text-wrapper">
+                    Sherlock
+                </span>
+                <span class="span">
+                    AI
+                </span>
+            </div>
+        </div>
+        <div class="CTA-button">
+            <div class="CTA-buttoon-text">Book a Demo</div>
+        </div>
+    </header>
+    <div class="hero window">
+        <div class="overlap">
+            <div class="frame">
+                <div class="frame-2">
+                    <h1 class="tagline">Amplify marketing efficiency with precision audiences</h1>
+                    <h4 class="text-wrapper-3">
+                        Generate and target audiences that resonate with your business’ goals with our custom,
+                        industry-leading AI
+                        consumer insights platform.
+                    </h4>
+                </div>
+                <div class="CTA-button">
+                    <div class="CTA-buttoon-text">Book a Demo</div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="overlap-group">
+                    <div class="japan-map">
+                        <img class="fukuoka" src="img/fukuoka.png" />
+                        <div class="ellipse"></div>
+                    </div>
+                    <img class="img" src="img/group-3.svg" />
+                    <img class="img" src="img/group-4.svg" />
+                    <img class="pointmap" src="img/pointmap.svg" />
+                    <div class="text-wrapper-5">
+                        <div>Learn More</div>
+                        <div>
+                            <img class="ic-round-keyboard" src="img/ic_round-keyboard-arrow-down.svg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feature-set window">
+        <h3 class="text-wrapper">Built to deliver custom insights for more of the right people</h3>
+        <div class="frame">
+            <div class="feature-box">
+                <div class="feature-img">
+                    <img class="frame-3" src="img/feature-audience.svg" />
+                </div>
+                <div class="feature-info">
+                    <p class="title">Understand your audiences online and off</p>
+                    <p class="description"> Discover new things that connects you to your audiences by understanding
+                        their online and offline activities, behaviors, and habits. </p>
+                </div>
+            </div>
+            <div class="feature-box">
+                <div class="feature-img">
+                    <img class="frame-3" src="img/feature-insights.svg" />
+                </div>
+                <div class="feature-info">
+                    <p class="title">Tailor insights by assimilating your data</p>
+                    <p class="description"> Bring your business’ data and merge it with our library of 40+ datasets to
+                        craft insights that are specific to your unique use cases, goals, and customer base. </p>
+                </div>
+            </div>
+            <div class="feature-box">
+                <div class="feature-img">
+                    <img class="frame-3" src="img/feature-behaviour.svg" />
+                </div>
+                <div class="feature-info">
+                    <p class="title">Create custom audiences with behavioral attributes</p>
+                    <p class="description"> Craft behavior-driven audiences based on attributes like affluence,
+                        lifestyle, and interests to ensure you hit your marketing goals every time. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outcome-set window">
+        <h3 class="text-wrapper">Significant impacts for impressive clients</h3>
+        <div class="frame">
+            <div class="outcome-box">
+                <div class="outcome-img">
+                    <img src="img/starbucks.png" />
+                </div>
+                <div class="title-2">Achieved 98% accuracy for revenue potential prediction.</div>
+            </div>
+            <div class="outcome-box">
+                <div class="outcome-img">
+                    <img src="img/discovery.svg" />
+                </div>
+                <div class="title-2">Achieved 8x subscriber targets.</div>
+            </div>
+            <div class="outcome-box">
+                <div class="outcome-img">
+                    <img src="img/kimberly-clark.svg" />
+                </div>
+                <div class="title-2">Reduced CAC by 48%.</div>
+            </div>
+        </div>
+    </div>
+    <div class="privacy window">
+        <div class="overlap-group2">
+            <h3 class="text-wrapper">Built with privacy in mind</h3>
+            <p class="title"> We are and will always commit to 100% compliance with GDPR and CCPA standards, which means
+                our data is ethically sourced from reputable vendors, validated to remove sensitive information, and
+                stored securely. </p>
+        </div>
+    </div>
+    <div class="call-to-action window">
+        <div>
+            <h3 class="text-wrapper">Supercharge your marketing by building precision audiences</h3>
+        </div>
+        <div class="CTA-button">
+            <div class="CTA-buttoon-text">Book a Demo</div>
+        </div>
+    </div>
+    <div class="footer window">
+        <div class="text-wrapper">© 2023 Infinite Analytics</div>
+        <div class="social-links-container">
+            <div>
+                Find Us:
+            </div>
+            <div class="social-icons">
+                <img class="social-icon" src="img/simple-icons_linkedin.svg" />
+                <img class="social-icon" src="img/simple-icons_facebook.svg" />
+                <img class="social-icon" src="img/simple-icons_x.svg" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
