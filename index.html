@@ -2,6 +2,14 @@
 <html>
 
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=371242500"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', '371242500');
+    </script>
     <!-- Embedded style sheet -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -669,6 +677,7 @@
             font-style: var(--inter-medium-heading-2-font-style);
         }
 
+
         .outcome-set {
             background-color: var(--backgrounddarkprimary);
         }
@@ -727,11 +736,11 @@
         }
 
         .privacy {
-            background-image: url('img/ic_round-lock.svg');
-            background-repeat: no-repeat;
-            background-position: center;
             margin: auto;
-            padding: 5rem;
+            padding: 5rem 2rem;
+            display: flex;
+            gap: 4rem;
+            align-items: center;
         }
 
         .privacy .text-wrapper {
@@ -739,7 +748,6 @@
             font-weight: 600;
             color: #ffffff;
             font-size: 2em;
-            text-align: center;
             letter-spacing: 0;
             line-height: 48px;
         }
@@ -868,6 +876,10 @@
             }
 
             .privacy {
+                text-align: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0;
                 padding: 5rem 0;
             }
 
@@ -993,6 +1005,13 @@
             </div>
         </div>
     </div>
+    <div class="demo-video window">
+        <div>
+            <video id="demo-vid" width="1200" controls loop poster="img/Screenshot 2023-12-07 at 1.58 1.png">
+                <source src="img/Features Reel v2 (Coconut).mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
     <div class="outcome-set window">
         <h3 class="text-wrapper">Significant impacts for impressive clients</h3>
         <div class="frame">
@@ -1017,6 +1036,9 @@
         </div>
     </div>
     <div class="privacy window">
+        <div>
+            <img src="img/ic_round-lock.svg" />
+        </div>
         <div class="overlap-group2">
             <h3 class="text-wrapper">Built with privacy in mind</h3>
             <p class="title"> We are and will always commit to 100% compliance with GDPR and CCPA standards, which means
